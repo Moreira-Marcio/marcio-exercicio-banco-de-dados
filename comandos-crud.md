@@ -145,8 +145,10 @@ VALUES (
 );
 ```
 ```sql
-SELECT nome, AVG(primeira_nota+segunda_nota /2) AS media_notas
-FROM alunos
-JOIN primeira_nota,segunda_nota ON alunos.id = notas.id_aluno
-GROUP BY alunos.id;
+   SELECT nome,SUM(primeira_nota + segunda_nota) AS soma_notas,
+    AVG(primeira_nota + segunda_nota) AS media_notas
+FROM
+    alunos
+GROUP BY
+    alunos.id, nome;
 ```
