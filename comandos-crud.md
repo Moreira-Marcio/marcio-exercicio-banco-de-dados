@@ -90,4 +90,41 @@ WHERE  id = 4;
 UPDATE cursos SET professor_id = 1
 WHERE  id = 5;
 ```
-
+```sql
+INSERT INTO alunos(nome, data_de_nascimento,primeira_nota,segunda_nota, curso_id)
+VALUES(
+    'jose',
+    '2000-07-10',
+    08.25,
+    05.50,
+    1
+),
+(
+    'mario',
+    '1985-09-07',
+    10.00,
+    06.00,
+    2
+),
+(
+    'lucas',
+    '2003-08-20',
+    08.25,
+    05.50,
+    5
+),
+(
+    'jonas',
+    '1993-10-02',
+    0.00,
+    10.00,
+    4
+),
+(
+    'fabio',
+    '1998-07-10',
+    07.25,
+    06.50,
+    3
+);
+```
