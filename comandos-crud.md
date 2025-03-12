@@ -179,8 +179,9 @@ JOIN
     cursos AS c ON a.curso_id = c.id;
 ```
 ```sql
-SELECT professores.nome AS professor, cursos.titulo AS curso
+SELECT professores.nome AS professor,
+    cursos.nome_do_curso AS curso
 FROM professores
-JOIN cursos ON professores.id = cursos.id_professor
+LEFT JOIN cursos ON professores.id = cursos.id_professor
 ORDER BY professores.nome;
 ```
