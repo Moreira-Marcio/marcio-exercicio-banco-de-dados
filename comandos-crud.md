@@ -168,3 +168,19 @@ FROM professores
 WHERE area_de_atuacao IN ('design', 'infra', 'desenvolvimento')
 GROUP BY area_de_atuacao;
 ```
+```sql
+SELECT
+    a.nome AS aluno,
+    c.nome_do_curso AS curso,
+    c.carga_horaria
+FROM
+    alunos AS a
+JOIN
+    cursos AS c ON a.curso_id = c.id;
+```
+```sql
+SELECT professores.nome AS professor, cursos.titulo AS curso
+FROM professores
+JOIN cursos ON professores.id = cursos.id_professor
+ORDER BY professores.nome;
+```
