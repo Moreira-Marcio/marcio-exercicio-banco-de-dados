@@ -146,7 +146,7 @@ VALUES (
 ```
 ```sql
    SELECT nome,SUM(primeira_nota + segunda_nota) AS soma_notas,
-    AVG(primeira_nota + segunda_nota) AS media_notas
+    AVG(primeira_nota + segunda_nota/2) AS media_notas
 FROM
     alunos
 GROUP BY
