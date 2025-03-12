@@ -130,8 +130,8 @@ VALUES(
 
 ```
 ```sql
-SELECT nome FROM aluno
-WHERE data_de_nascimento < 2009;
+SELECT nome, data_de_nascimento FROM alunos
+WHERE data_de_nascimento < '2009-01-01';
 
 ```
 ```sql
@@ -143,4 +143,10 @@ VALUES (
     06.50,
     3
 );
+```
+```sql
+SELECT nome, AVG(primeira_nota+segunda_nota /2) AS media_notas
+FROM alunos
+JOIN primeira_nota,segunda_nota ON alunos.id = notas.id_aluno
+GROUP BY alunos.id;
 ```
