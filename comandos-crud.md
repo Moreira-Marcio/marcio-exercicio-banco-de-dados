@@ -152,3 +152,8 @@ FROM
 GROUP BY
     alunos.id, nome;
 ```
+```sql
+SELECT curso.nome_do_curso, (curso.carga_horaria * 0.25) AS limite_faltas
+FROM cursos AS curso
+ORDER BY curso.nome_do_curso;
+```
