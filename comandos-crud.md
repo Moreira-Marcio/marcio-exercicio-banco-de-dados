@@ -4,33 +4,33 @@
 INSERT INTO cursos(nome_do_curso, carga_horaria)
 VALUES(
     'Front-End', 
-    '40 horas'
+    40 
 
 
 ),
 (
     'Back-End', 
-    '80 horas'
+    80
 
 
 ),
 
 (
     'UX/UI Design', 
-    '30 horas'
+    30
 
 
 ),
 (
     'Figma', 
-    '10 horas'
+     10
 
 
 ),
 
 (
     'Redes de Computadores', 
-    '100 horas'
+     100
 
 
 );
@@ -123,6 +123,22 @@ VALUES(
 (
     'fabio',
     '1998-07-10',
+    07.25,
+    06.50,
+    3
+);
+
+```
+```sql
+SELECT nome FROM aluno
+WHERE data_de_nascimento < 2009;
+
+```
+```sql
+INSERT INTO alunos(nome, data_de_nascimento,primeira_nota,segunda_nota, curso_id)
+VALUES (
+    'paula',
+    '2012-07-10',
     07.25,
     06.50,
     3
