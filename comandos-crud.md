@@ -216,3 +216,10 @@ JOIN cursos ON alunos.curso_id = cursos.id
 WHERE cursos.nome_do_curso IN ('Front-End', 'Back-End')
 ORDER BY alunos.nome;
 ```
+
+
+ ```sql
+UPDATE cursos
+SET nome_do_curso = 'Adobe XD', carga_horaria = 15
+WHERE nome_do_curso = 'Figma';
+ ```
