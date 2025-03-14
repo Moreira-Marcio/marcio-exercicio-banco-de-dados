@@ -253,5 +253,5 @@ SELECT
 FROM alunos
 JOIN cursos ON alunos.curso_id = cursos.id
 GROUP BY alunos.id
-HAVING Media >= 7;
+HAVING Media > 7;
 ```
