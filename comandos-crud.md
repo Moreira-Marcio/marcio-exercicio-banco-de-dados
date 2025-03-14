@@ -185,3 +185,11 @@ FROM professores
 LEFT JOIN cursos ON professores.id = cursos.id_professor
 ORDER BY professores.nome;
 ```
+```sql
+SELECT alunos.nome AS aluno, cursos.nome_do_curso AS curso, professores.nome AS professor
+FROM alunos
+JOIN alunos ON alunos.id = cursos.aluno_id
+JOIN cursos ON cursos.curso_id = cursos.id
+JOIN professores ON cursos.professor_id = professores.id;
+
+ ```  
