@@ -265,3 +265,13 @@ JOIN cursos ON alunos.curso_id = cursos.id
 GROUP BY alunos.id
 HAVING Media < 7;
 ```
+```sql
+SELECT 
+    alunos.nome AS Nome_Aluno,
+    alunos.primeira_nota + alunos.segunda_nota AS Soma_Notas,
+    (alunos.primeira_nota + alunos.segunda_nota) / 2.0 AS Media
+FROM alunos
+JOIN cursos ON alunos.curso_id = cursos.id
+GROUP BY alunos.id
+HAVING Media >= 7;
+```
