@@ -223,3 +223,10 @@ UPDATE cursos
 SET nome_do_curso = 'Adobe XD', carga_horaria = 15
 WHERE nome_do_curso = 'Figma';
  ```
+ ```sql
+ DELETE FROM alunos
+WHERE curso_id = (SELECT id FROM cursos WHERE nome_do_curso = 'Redes de Computadores');
+
+DELETE FROM alunos
+WHERE curso_id = (SELECT id FROM cursos WHERE nome_do_curso = 'UX/UI');
+```
