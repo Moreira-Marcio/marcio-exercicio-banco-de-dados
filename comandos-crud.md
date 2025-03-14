@@ -186,10 +186,22 @@ LEFT JOIN cursos ON professores.id = cursos.id_professor
 ORDER BY professores.nome;
 ```
 ```sql
-SELECT alunos.nome AS aluno, cursos.nome_do_curso AS curso, professores.nome AS professor
+SELECT 
+    alunos.nome AS Nome_Aluno, 
+    cursos.nome_do_curso AS Curso, 
+    professores.nome AS Professor
 FROM alunos
-JOIN alunos ON alunos.id = cursos.aluno_id
-JOIN cursos ON cursos.curso_id = cursos.id
+JOIN cursos ON alunos.curso_id = cursos.id
 JOIN professores ON cursos.professor_id = professores.id;
 
  ```  
+
+ ```sql 
+SELECT 
+    cursos.nome_do_curso AS Curso, 
+    COUNT(alunos.id) AS Quantidade_Alunos
+FROM cursos
+LEFT JOIN alunos ON cursos.id = alunos.curso_id
+GROUP BY cursos.nome_do_curso
+ORDER BY Quantidade_Alunos DESC;
+  ``` 
