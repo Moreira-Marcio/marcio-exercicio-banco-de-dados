@@ -238,3 +238,9 @@ FROM alunos
 JOIN cursos ON alunos.curso_id = cursos.id
 ORDER BY Nome_Aluno;
 ```
+```sql
+SELECT 
+    nome AS Nome_Aluno, 
+    TIMESTAMPDIFF(YEAR, data_de_nascimento, CURDATE()) AS Idade
+FROM alunos;
+```
