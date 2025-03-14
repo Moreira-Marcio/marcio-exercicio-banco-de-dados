@@ -205,3 +205,14 @@ LEFT JOIN alunos ON cursos.id = alunos.curso_id
 GROUP BY cursos.nome_do_curso
 ORDER BY Quantidade_Alunos DESC;
   ``` 
+ ```sql 
+SELECT
+    alunos.nome AS Nome_Aluno,
+    alunos.primeira_nota + alunos.segunda_nota AS Soma_Notas,
+    (alunos.primeira_nota + alunos.segunda_nota) / 2.0 AS Media,
+    cursos.nome_do_curso AS Curso
+FROM alunos
+JOIN cursos ON alunos.curso_id = cursos.id
+WHERE cursos.nome_do_curso IN ('Front-End', 'Back-End')
+ORDER BY alunos.nome;
+```
