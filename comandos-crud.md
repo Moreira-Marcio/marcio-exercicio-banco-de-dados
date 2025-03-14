@@ -230,3 +230,11 @@ WHERE curso_id = (SELECT id FROM cursos WHERE nome_do_curso = 'Redes de Computad
 DELETE FROM alunos
 WHERE curso_id = (SELECT id FROM cursos WHERE nome_do_curso = 'UX/UI');
 ```
+```sql
+SELECT 
+    alunos.nome AS Nome_Aluno, 
+    cursos.nome_do_curso AS Curso
+FROM alunos
+JOIN cursos ON alunos.curso_id = cursos.id
+ORDER BY Nome_Aluno;
+```
